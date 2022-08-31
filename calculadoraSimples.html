@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <script>
+   
+        function resultadoOperacao() {
+
+            var n1 = parseFloat(document.getElementById("num1").value);
+            var n2 = parseFloat(document.getElementById("num2").value);
+
+            var n3 = document.querySelector('#operador').selectedOptions[0].id;
+
+            switch (n3) {
+                case 'soma':
+                    var result = n1 + n2;
+                    document.getElementById("resultado").innerHTML = result;
+                    break;
+                case 'subtracao':
+                    var result = n1 - n2;
+                    document.getElementById("resultado").innerHTML = result;
+                    break;
+                case 'multiplicacao':
+                    var result = n1 * n2;
+                    document.getElementById("resultado").innerHTML = result;
+                    break;
+                case 'divisao':
+                    var result = n1 / n2;
+                    document.getElementById("resultado").innerHTML = result;
+                    break;
+                default:
+                    break;
+            }  
+       }
+
+    </script>
+    <style>
+
+        body {
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+            padding: 0px;
+            border: 0px;
+            margin: 0px;
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+
+        h1, h2, form, input, button {
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        #resultado_rodape {
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+            text-align: center;
+            display: flex;
+        }
+
+        #resultado {
+            background-color: coral;
+            width: 20%;
+            height: 40px;
+            text-align: center;
+            align-items: center;
+            border: 5px solid red;
+            border-radius: 5px;
+        }
+        
+    </style>
+</head>
+<body>
+    <section id="cabecalho">
+        <h1>Calculadora Simples</h1><br>
+    </section>
+
+    <section id="dados_formulario">
+        <form action="">
+            <input type="number" name="" id="num1" placeholder="Valor 1"><br><br>
+            <select name="operador" id="operador">
+                <option value="+" id="soma">Somar</option>
+                <option value="-" id="subtracao">Subtrair</option>
+                <option value="*" id="multiplicacao">Multiplicar</option>
+                <option value="/" id="divisao">Dividir</option>
+            </select><br><br>
+            <input type="number" name="" id="num2" placeholder="Valor 2"><br>
+        </form><br>
+        <input type="button" value="Resultado" onclick="resultadoOperacao()"><br><br>
+    </section>
+
+    <section id="resultado_rodape">
+        <h2 id="resultado"></h2>
+    </section>
+</body>
+</html>
