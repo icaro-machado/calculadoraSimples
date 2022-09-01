@@ -40,24 +40,43 @@
     <style>
 
         body {
+            display: flexbox;
             align-items: center;
             align-content: center;
             justify-content: center;
+            width: 200px;
             padding: 0px;
             border: 0px;
             margin: 0px;
             background-color: black;
-            color: white;
             text-align: center;
         }
 
-        h1, h2, form, input, button {
+        h1, h2, form, input, button, label {
             align-items: center;
             align-content: center;
             justify-content: center;
             text-align: center;
         }
         
+        h1, label {
+            color: white;
+        }
+
+        h2 {
+            color: aqua;
+        }
+
+        input {
+            width: 100%;
+            height: 20px;
+        }
+
+        #cabecalho, #dados_formulario, #resultado_rodape {
+            text-align: center;
+            width: 200px;
+        }
+
         #resultado_rodape {
             align-items: center;
             align-content: center;
@@ -67,12 +86,12 @@
         }
 
         #resultado {
-            background-color: coral;
-            width: 20%;
+            width: 100%;
             height: 40px;
             text-align: center;
             align-items: center;
-            border: 5px solid red;
+            color: aqua;
+            border: 2px solid aqua;
             border-radius: 5px;
         }
         
@@ -86,6 +105,7 @@
     <section id="dados_formulario">
         <form action="">
             <input type="number" name="" id="num1" placeholder="Valor 1"><br><br>
+            <label for="">Escolha a operação:</label>
             <select name="operador" id="operador">
                 <option value="+" id="soma">Somar</option>
                 <option value="-" id="subtracao">Subtrair</option>
@@ -94,7 +114,7 @@
             </select><br><br>
             <input type="number" name="" id="num2" placeholder="Valor 2"><br>
         </form><br>
-        <input type="button" value="Resultado" onclick="resultadoOperacao()"><br><br>
+        <input type="button" value="Clique para exibir o resultado" onclick="resultadoOperacao()"><br>
     </section>
 
     <section id="resultado_rodape">
