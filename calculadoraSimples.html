@@ -16,19 +16,19 @@
 
             switch (n3) {
                 case 'soma':
-                    var result = n1 + n2;
+                    var result = (n1 + n2).toFixed(2);
                     document.getElementById("resultado").innerHTML = result;
                     break;
                 case 'subtracao':
-                    var result = n1 - n2;
+                    var result = (n1 - n2).toFixed(2);
                     document.getElementById("resultado").innerHTML = result;
                     break;
                 case 'multiplicacao':
-                    var result = n1 * n2;
+                    var result = (n1 * n2).toFixed(2);
                     document.getElementById("resultado").innerHTML = result;
                     break;
                 case 'divisao':
-                    var result = n1 / n2;
+                    var result = (n1 / n2).toFixed(2);
                     document.getElementById("resultado").innerHTML = result;
                     break;
                 default:
@@ -103,7 +103,7 @@
     <section id="dados_formulario">
         <form action="">
             <input type="number" name="" id="num1" placeholder="Valor 1"><br><br>
-            <label for="">Escolha a operação:</label>
+            <label for="">Escolha uma operação:</label>
             <select name="operador" id="operador">
                 <option value="+" id="soma">Somar</option>
                 <option value="-" id="subtracao">Subtrair</option>
