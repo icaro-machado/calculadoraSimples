@@ -68,9 +68,15 @@
 
         input {
             width: 200px;
-            height: 20px;
+            height: 30px;
         }
 
+        #num1, #num2 {
+            width: 150px;
+            border: 0px;
+            border-radius: 5px;
+            font-size: 20px;
+        }
         #cabecalho, #resultado_rodape {
             display: block;
             width: 100%;
@@ -85,8 +91,8 @@
         #resultado {
             display: flexbox;
             margin: auto;
-            max-width: 200px;
-            width: 100%;
+            min-width: 200px;
+            max-width: fit-content;
             height: 40px;
             color: aqua;
             border: 2px solid aqua;
