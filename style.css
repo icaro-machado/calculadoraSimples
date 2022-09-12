@@ -1,0 +1,65 @@
+body {
+    display: flexbox;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0px;
+    border: 0px;
+    margin: 0px;
+    background-color: black;
+}
+
+h1, h2, form, input, button, label {
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+}
+
+h1, label {
+    color: white;
+    font-size: 30px;
+}
+
+label {
+    font-size: 20px;
+}
+
+h2 {
+    color: aqua;
+}
+
+input {
+    width: 200px;
+    height: 30px;
+}
+
+#num1, #num2 {
+    width: 150px;
+    border: 0px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+#cabecalho, #resultado_rodape {
+    display: block;
+    width: 100%;
+}
+
+#dados_formulario {
+    width: 100%;
+    display: flexbox;
+    flex-direction: column;
+}
+
+#resultado {
+    display: flexbox;
+    margin: auto;
+    min-width: 200px;
+    max-width: fit-content;
+    height: 40px;
+    color: aqua;
+    border: 2px solid aqua;
+    border-radius: 5px;
+}
